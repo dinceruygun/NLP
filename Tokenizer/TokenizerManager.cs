@@ -40,8 +40,12 @@ namespace Tokenizer
             var lineParser = new Parser.Line(BaseText);
             var lines = lineParser.Parse();
 
-
-            var s = new Escape.WordShort();
+            foreach (var line in lines)
+            {
+                var sentenceParser = new Parser.Sentence(line);
+                line.SentenceList = sentenceParser.Parse();
+            }
+            
 
 
         }
