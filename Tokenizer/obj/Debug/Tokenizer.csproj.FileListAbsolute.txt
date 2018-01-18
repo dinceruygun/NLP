@@ -1,0 +1,5 @@
+c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\bin\Debug\Tokenizer.dll
+c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\bin\Debug\Tokenizer.pdb
+c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\obj\Debug\Tokenizer.csprojResolveAssemblyReference.cache
+c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\obj\Debug\Tokenizer.dll
+c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\obj\Debug\Tokenizer.pdb
