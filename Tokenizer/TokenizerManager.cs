@@ -40,6 +40,7 @@ namespace Tokenizer
             var lineParser = new Parser.Line();
             var sentenceParser = new Parser.Sentence();
             var wordParser = new Parser.Word();
+            var syllableParser = new Parser.Syllable();
 
 
 
@@ -52,6 +53,12 @@ namespace Tokenizer
                 foreach (var sentence in line.SentenceList)
                 {
                     sentence.WordList = wordParser.Parse(sentence);
+
+                    foreach (var word in sentence.WordList)
+                    {
+                        word.Syllable = syllableParser.Parse(word);
+                    }
+
                 }
 
             }

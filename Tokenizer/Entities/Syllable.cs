@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Tokenizer.Entities
 {
     [System.Diagnostics.DebuggerDisplay("{ToString()}")]
-    public class Word
+    public class Syllable
     {
         string _text;
 
@@ -24,15 +24,14 @@ namespace Tokenizer.Entities
             }
         }
 
-        public SyllableCollection Syllable { get; internal set; }
 
-        public Word()
+        public Syllable()
         {
-
+               
         }
 
 
-        public Word(string text)
+        public Syllable(string text)
         {
             _text = text;
         }

@@ -44,6 +44,8 @@
     <Compile Include="Entities\LineCollection.cs" />
     <Compile Include="Entities\Sentence.cs" />
     <Compile Include="Entities\SentenceCollection.cs" />
+    <Compile Include="Entities\Syllable.cs" />
+    <Compile Include="Entities\SyllableCollection.cs" />
     <Compile Include="Entities\TokenizerEntity.cs" />
     <Compile Include="Entities\Word.cs" />
     <Compile Include="Entities\WordCollection.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="Extention\ExtentionClass.cs" />
     <Compile Include="Parser\Line.cs" />
     <Compile Include="Parser\Sentence.cs" />
+    <Compile Include="Parser\Syllable.cs" />
     <Compile Include="Parser\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenizerManager.cs" />
