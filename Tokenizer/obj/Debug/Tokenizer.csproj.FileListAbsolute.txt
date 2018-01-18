@@ -3,3 +3,8 @@ c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\bi
 c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\obj\Debug\Tokenizer.csprojResolveAssemblyReference.cache
 c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\obj\Debug\Tokenizer.dll
 c:\users\dincer.uygun\documents\visual studio 2015\Projects\NLP\NLP\Tokenizer\obj\Debug\Tokenizer.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Tokenizer\bin\Debug\Tokenizer.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Tokenizer\bin\Debug\Tokenizer.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Tokenizer\obj\Debug\Tokenizer.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Tokenizer\obj\Debug\Tokenizer.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Tokenizer\obj\Debug\Tokenizer.pdb

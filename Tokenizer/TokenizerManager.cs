@@ -39,6 +39,11 @@ namespace Tokenizer
 
             var lineParser = new Parser.Line(BaseText);
             var lines = lineParser.Parse();
+
+
+            var s = new Escape.WordShort();
+
+
         }
 
     }

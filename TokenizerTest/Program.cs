@@ -21,8 +21,6 @@ namespace TokenizerTest
 
 
 
-            var t = data.Split(Environment.NewLine.ToCharArray()).Where(s => s != "").Select(s => s.Trim()).ToArray();
-
 
             var tokenizer = new TokenizerManager(data);
 

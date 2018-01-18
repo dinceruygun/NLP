@@ -6,3 +6,11 @@ c:\Users\dincer.uygun\Documents\Visual Studio 2015\Projects\NLP\NLP\TokenizerTes
 c:\Users\dincer.uygun\Documents\Visual Studio 2015\Projects\NLP\NLP\TokenizerTest\obj\Debug\TokenizerTest.pdb
 c:\Users\dincer.uygun\Documents\Visual Studio 2015\Projects\NLP\NLP\TokenizerTest\bin\Debug\Tokenizer.dll
 c:\Users\dincer.uygun\Documents\Visual Studio 2015\Projects\NLP\NLP\TokenizerTest\bin\Debug\Tokenizer.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\TokenizerTest.exe.config
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\TokenizerTest.exe
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\TokenizerTest.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Tokenizer.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Tokenizer.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\obj\Debug\TokenizerTest.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\obj\Debug\TokenizerTest.exe
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\obj\Debug\TokenizerTest.pdb
