@@ -7,23 +7,9 @@ using System.Threading.Tasks;
 namespace Tokenizer.Entities
 {
     [System.Diagnostics.DebuggerDisplay("{ToString()}")]
-    public class Sentence
+    public class Word
     {
-        Line _line;
         string _text;
-
-        public Line Line
-        {
-            get
-            {
-                return _line;
-            }
-
-            internal set
-            {
-                _line = value;
-            }
-        }
 
         public string Text
         {
@@ -38,18 +24,16 @@ namespace Tokenizer.Entities
             }
         }
 
-        public WordCollection WordList { get; internal set; }
 
-        public Sentence()
+        public Word()
         {
 
         }
 
 
-        public Sentence(Line line, string text)
+        public Word(string text)
         {
-            this._line = line;
-            this._text = text;
+            _text = text;
         }
 
 

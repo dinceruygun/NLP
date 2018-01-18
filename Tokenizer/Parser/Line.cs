@@ -43,10 +43,12 @@ namespace Tokenizer.Parser
             return result;
         }
 
-        public void Parse(string Text)
+        public Entities.LineCollection Parse(string Text)
         {
             this._baseText = Text;
-            this.Parse();
+
+
+            return this.Parse();
         }
     }
 }

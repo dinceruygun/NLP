@@ -37,13 +37,23 @@ namespace Tokenizer
         {
             if (string.IsNullOrEmpty(BaseText)) return;
 
-            var lineParser = new Parser.Line(BaseText);
-            var lines = lineParser.Parse();
+            var lineParser = new Parser.Line();
+            var sentenceParser = new Parser.Sentence();
+            var wordParser = new Parser.Word();
+
+
+
+            var lines = lineParser.Parse(BaseText);
 
             foreach (var line in lines)
             {
-                var sentenceParser = new Parser.Sentence(line);
-                line.SentenceList = sentenceParser.Parse();
+                line.SentenceList = sentenceParser.Parse(line);
+
+                foreach (var sentence in line.SentenceList)
+                {
+                    sentence.WordList = wordParser.Parse(sentence);
+                }
+
             }
             
 
