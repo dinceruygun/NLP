@@ -14,3 +14,7 @@ C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Tokenizer.pdb
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\obj\Debug\TokenizerTest.csprojResolveAssemblyReference.cache
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\obj\Debug\TokenizerTest.exe
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\obj\Debug\TokenizerTest.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPExtention.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPExtention.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Newtonsoft.Json.xml

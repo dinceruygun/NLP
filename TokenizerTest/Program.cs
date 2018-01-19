@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLPExtention;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace TokenizerTest
     {
         static void Main(string[] args)
         {
+
+            var aa = ToTurkish.TurkishCharacters;
 
 
             var data = @"DEV DALGALAR OLUŞTU

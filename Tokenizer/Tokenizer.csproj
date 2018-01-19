@@ -56,7 +56,6 @@
     <Compile Include="Escape\EscapeItem.cs" />
     <Compile Include="Escape\EscapeType.cs" />
     <Compile Include="Escape\WordShort.cs" />
-    <Compile Include="Extention\ExtentionClass.cs" />
     <Compile Include="Parser\Line.cs" />
     <Compile Include="Parser\Sentence.cs" />
     <Compile Include="Parser\Syllable.cs" />
@@ -64,7 +63,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenizerManager.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\NLPExtention\NLPExtention.csproj">
+      <Project>{7b8e2c25-312d-4fd1-8112-c985821a0057}</Project>
+      <Name>NLPExtention</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Container\ShortList.txt" />
   </ItemGroup>
