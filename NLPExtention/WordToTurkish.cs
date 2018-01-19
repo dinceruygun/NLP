@@ -11,12 +11,14 @@ using Newtonsoft.Json.Linq;
 
 namespace NLPExtention
 {
-    public static class ToTurkish
+    public static class WordToTurkish
     {
         private static string asciiString;
         private static string turkishString;
+        static int turkishContextSize = 10;
 
-        private static Dictionary<string, Dictionary<string, int?>> _turkishPattern;
+
+        private static Dictionary<string, Dictionary<string, int>> _turkishPattern;
 
 
 
@@ -58,8 +60,8 @@ namespace NLPExtention
 
                     foreach (var letter in uppercaseLetters)
                     {
-                        _turkishDowncaseAsciifyTable.Add(letter, letter.ToLower(CultureInfo.CurrentCulture));
-                        _turkishDowncaseAsciifyTable.Add(letter.ToLower(CultureInfo.CurrentCulture), letter.ToLower(CultureInfo.CurrentCulture));
+                        _turkishDowncaseAsciifyTable.Add(letter, letter.ToLower(CultureInfo.GetCultureInfo("en-GB")));
+                        _turkishDowncaseAsciifyTable.Add(letter.ToLower(CultureInfo.GetCultureInfo("en-GB")), letter.ToLower(CultureInfo.GetCultureInfo("en-GB")));
                     }
 
 
@@ -97,8 +99,8 @@ namespace NLPExtention
 
                     foreach (var letter in uppercaseLetters)
                     {
-                        _turkishUpcaseAccentsTable.Add(letter, letter.ToLower(CultureInfo.CurrentCulture));
-                        _turkishUpcaseAccentsTable.Add(letter.ToLower(CultureInfo.CurrentCulture), letter.ToLower(CultureInfo.CurrentCulture));
+                        _turkishUpcaseAccentsTable.Add(letter, letter.ToLower(CultureInfo.GetCultureInfo("en-GB")));
+                        _turkishUpcaseAccentsTable.Add(letter.ToLower(CultureInfo.GetCultureInfo("en-GB")), letter.ToLower(CultureInfo.GetCultureInfo("en-GB")));
                     }
 
 
@@ -134,7 +136,7 @@ namespace NLPExtention
                 {
                     _turkishToggleAccentTable = new Dictionary<string, string>();
 
-                    _turkishToggleAccentTable.Add("c", "ç"); // initial direction
+                    _turkishToggleAccentTable.Add("c", "ç");
                     _turkishToggleAccentTable.Add("C", "Ç");
                     _turkishToggleAccentTable.Add("g", "ğ");
                     _turkishToggleAccentTable.Add("G", "Ğ");
@@ -146,7 +148,7 @@ namespace NLPExtention
                     _turkishToggleAccentTable.Add("I", "İ");
                     _turkishToggleAccentTable.Add("s", "ş");
                     _turkishToggleAccentTable.Add("S", "Ş");
-                    _turkishToggleAccentTable.Add("ç", "c"); // other direction
+                    _turkishToggleAccentTable.Add("ç", "c"); 
                     _turkishToggleAccentTable.Add("Ç", "C");
                     _turkishToggleAccentTable.Add("ğ", "g");
                     _turkishToggleAccentTable.Add("Ğ", "G");
@@ -169,13 +171,13 @@ namespace NLPExtention
 
 
 
-        public static Dictionary<string, Dictionary<string, int?>> TurkishPattern
+        public static Dictionary<string, Dictionary<string, int>> TurkishPattern
         {
             get
             {
                 if (_turkishPattern == null)
                 {
-                    _turkishPattern = new Dictionary<string, Dictionary<string, int?>>();
+                    _turkishPattern = new Dictionary<string, Dictionary<string, int>>();
 
                     Assembly assembly = Assembly.GetExecutingAssembly();
                     TextReader inputStream = new StreamReader(assembly.GetManifestResourceStream("NLPExtention.Container.TurkishPattern.txt"));
@@ -192,41 +194,41 @@ namespace NLPExtention
                     var i = json.i;
 
 
-                    var cList = new Dictionary<string, int?>();
-                    var gList = new Dictionary<string, int?>();
-                    var oList = new Dictionary<string, int?>();
-                    var sList = new Dictionary<string, int?>();
-                    var uList = new Dictionary<string, int?>();
-                    var iList = new Dictionary<string, int?>();
+                    var cList = new Dictionary<string, int>();
+                    var gList = new Dictionary<string, int>();
+                    var oList = new Dictionary<string, int>();
+                    var sList = new Dictionary<string, int>();
+                    var uList = new Dictionary<string, int>();
+                    var iList = new Dictionary<string, int>();
 
                     foreach (var item in c)
                     {
-                        cList.Add((item.Name as string), (item.Value.Value as int?));
+                        cList.Add((item.Name as string), (int.Parse(item.Value.Value.ToString())));
                     }
 
                     foreach (var item in g)
                     {
-                        gList.Add((item.Name as string), (item.Value.Value as int?));
+                        gList.Add((item.Name as string), (int.Parse(item.Value.Value.ToString())));
                     }
 
                     foreach (var item in o)
                     {
-                        oList.Add((item.Name as string), (item.Value.Value as int?));
+                        oList.Add((item.Name as string), (int.Parse(item.Value.Value.ToString())));
                     }
 
                     foreach (var item in s)
                     {
-                        sList.Add((item.Name as string), (item.Value.Value as int?));
+                        sList.Add((item.Name as string), (int.Parse(item.Value.Value.ToString())));
                     }
 
                     foreach (var item in u)
                     {
-                        uList.Add((item.Name as string), (item.Value.Value as int?));
+                        uList.Add((item.Name as string), (int.Parse(item.Value.Value.ToString())));
                     }
 
                     foreach (var item in i)
                     {
-                        iList.Add((item.Name as string), (item.Value.Value as int?));
+                        iList.Add((item.Name as string), (int.Parse(item.Value.Value.ToString())));
                     }
 
 
@@ -259,11 +261,221 @@ namespace NLPExtention
 
 
 
-        static ToTurkish()
+        static WordToTurkish()
         {
             
 
         }
+
+
+
+
+        private static string setCharAt(string mystr, int pos, string c)
+        {
+            return string.Concat(mystr.Substring(0, pos), c, mystr.Substring(pos + 1, mystr.Length - (pos + 1)));
+        }
+
+
+        private static string turkishToggleAccent(string c)
+        {
+            string result = TurkishToggleAccentTable[c];
+            return (result == null) ? c : result;
+        }
+
+
+        private static string repeatString(string haystack, int times)
+        {
+            StringBuilder tmp = new StringBuilder();
+            for (int i = 0; i < times; i++)
+                tmp.Append(haystack);
+
+            return tmp.ToString();
+        }
+
+
+
+        private static bool turkishMatchPattern(Dictionary<string, int> dlist, int point)
+        {
+            int rank = dlist.Count * 2;
+            string str = turkishGetContext(turkishContextSize, point);
+
+            int start = 0;
+            int end = 0;
+            int _len = str.Length;
+
+            while (start <= turkishContextSize)
+            {
+                end = turkishContextSize;
+                while (end <= _len)
+                {
+                    string s = str.Substring(start, end - start);
+
+                    int r = 0;
+                    var control = dlist.TryGetValue(s, out r);
+
+
+                    if (control && Math.Abs(r) < Math.Abs(rank))
+                    {
+                        rank = r;
+                    }
+                    end++;
+                }
+                start++;
+            }
+            return rank > 0;
+        }
+
+
+
+        private static bool turkishMatchPattern(Dictionary<string, int> dlist)
+        {
+            return turkishMatchPattern(dlist, 0);
+        }
+
+
+        private static string turkishGetContext(int size, int point)
+        {
+            string s = repeatString(" ", (1 + (2 * size)));
+            s = setCharAt(s, size, "X");
+
+            int i = size + 1;
+            bool space = false;
+            int index = point;
+            index++;
+
+            string currentChar;
+
+            while (i < s.Length && !space && index < asciiString.Length)
+            {
+                currentChar = turkishString[index].ToString();
+
+                string x = TurkishDowncaseAsciifyTable[currentChar];
+
+                if (x == null)
+                {
+                    if (!space)
+                    {
+                        i++;
+                        space = true;
+                    }
+                }
+                else
+                {
+                    s = setCharAt(s, i, x);
+                    i++;
+                    space = false;
+                }
+                index++;
+            }
+
+            s = s.Substring(0, i);
+
+            index = point;
+            i = size - 1;
+            space = false;
+
+            index--;
+
+            while (i >= 0 && index >= 0)
+            {
+                currentChar = turkishString[index].ToString();
+                string x = TurkishUpcaseAccentsTable[currentChar];
+
+                if (x == null)
+                {
+                    if (!space)
+                    {
+                        i--;
+                        space = true;
+                    }
+                }
+                else
+                {
+                    s
+                            = setCharAt(s, i, x);
+                    i--;
+                    space = false;
+                }
+                index--;
+            }
+
+            return s;
+        }
+
+
+
+
+
+
+        private static bool turkishNeedCorrection(string c, int point)
+        {
+            string ch = c;
+
+            string tr = TurkishDowncaseAsciifyTable[ch];
+            if (tr == null)
+                tr = ch;
+
+            Dictionary<string, int> pl = TurkishPattern.ContainsKey(tr.ToLower(CultureInfo.GetCultureInfo("en-GB"))) ? TurkishPattern[tr.ToLower(CultureInfo.GetCultureInfo("en-GB"))] : null;
+
+            bool m = false;
+            if (pl != null)
+            {
+                m = turkishMatchPattern(pl, point);
+            }
+
+            if (tr.Equals("I"))
+            {
+                if (ch.Equals(tr))
+                {
+                    return !m;
+                }
+                else
+                {
+                    return m;
+                }
+            }
+            else
+            {
+                if (ch.Equals(tr))
+                {
+                    return m;
+                }
+                else
+                {
+                    return !m;
+                }
+            }
+        }
+
+
+
+        public static string ToTurkish(this string text)
+        {
+            if (string.IsNullOrEmpty(text)) return null;
+            if (text.Trim() == "") return null;
+            if (text.IndexOf(" ") > 0) return null;
+
+
+            turkishString = text;
+            asciiString = text;
+
+            for (int i = 0; i < turkishString.Length; i++)
+            {
+                string c = turkishString[i].ToString();
+
+                if (turkishNeedCorrection(c, i))
+                {
+                    turkishString = setCharAt(turkishString, i,
+                            turkishToggleAccent(c));
+                }
+                else
+                {
+                    turkishString = setCharAt(turkishString, i, c);
+                }
+            }
+            return turkishString;
+        }
+
 
 
 

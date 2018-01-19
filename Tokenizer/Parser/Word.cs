@@ -8,9 +8,9 @@ namespace Tokenizer.Parser
 {
     public class Word
     {
-        Entities.Sentence _sentence;
+        NLPEnvironment.Entities.Sentence _sentence;
 
-        public Entities.Sentence Sentence
+        public NLPEnvironment.Entities.Sentence Sentence
         {
             get
             {
@@ -29,14 +29,14 @@ namespace Tokenizer.Parser
 
         }
 
-        public Word(Entities.Sentence sentence)
+        public Word(NLPEnvironment.Entities.Sentence sentence)
         {
             _sentence = sentence;
         }
 
 
 
-        public Entities.WordCollection Parse(Entities.Sentence sentence)
+        public NLPEnvironment.Entities.WordCollection Parse(NLPEnvironment.Entities.Sentence sentence)
         {
             _sentence = sentence;
 
@@ -46,7 +46,7 @@ namespace Tokenizer.Parser
         }
 
 
-        public Entities.WordCollection Parse()
+        public NLPEnvironment.Entities.WordCollection Parse()
         {
 
             if (Sentence == null) return null;
@@ -54,7 +54,7 @@ namespace Tokenizer.Parser
 
 
 
-            var result = new Entities.WordCollection();
+            var result = new NLPEnvironment.Entities.WordCollection();
 
 
 
@@ -63,7 +63,7 @@ namespace Tokenizer.Parser
 
             foreach (var tab in tabs)
             {
-                result.AddRange((tab.Split(' ')).Where(w => w != "" && w != " ").Select(w => new Entities.Word(w.Trim().Replace("İ", "i").ToLower())).ToArray());
+                result.AddRange((tab.Split(' ')).Where(w => w != "" && w != " ").Select(w => new NLPEnvironment.Entities.Word(w.Trim().Replace("İ", "i").ToLower())).ToArray());
             }
 
 

@@ -8,9 +8,9 @@ namespace Tokenizer.Parser
 {
     public class Sentence
     {
-        Entities.Line _line;
+        NLPEnvironment.Entities.Line _line;
 
-        public Entities.Line Line
+        public NLPEnvironment.Entities.Line Line
         {
             get
             {
@@ -29,13 +29,13 @@ namespace Tokenizer.Parser
 
         }
 
-        public Sentence(Entities.Line line)
+        public Sentence(NLPEnvironment.Entities.Line line)
         {
             _line = line;
         }
 
 
-        public Entities.SentenceCollection Parse(Entities.Line line)
+        public NLPEnvironment.Entities.SentenceCollection Parse(NLPEnvironment.Entities.Line line)
         {
             _line = line;
 
@@ -43,12 +43,12 @@ namespace Tokenizer.Parser
         }
 
 
-        public Entities.SentenceCollection Parse()
+        public NLPEnvironment.Entities.SentenceCollection Parse()
         {
             if (Line == null) return null;
 
 
-            var result = new Entities.SentenceCollection();
+            var result = new NLPEnvironment.Entities.SentenceCollection();
             var escapeControl = new Escape.EscapeControl();
 
 
@@ -57,7 +57,7 @@ namespace Tokenizer.Parser
 
             if (escapeList.Count == 0)
             {
-                result.Add(new Entities.Sentence(Line, Line.Text));
+                result.Add(new NLPEnvironment.Entities.Sentence(Line, Line.Text));
                 return result;
             }
 
@@ -69,7 +69,7 @@ namespace Tokenizer.Parser
             {
                 var text = Line.Text.Substring(startIndex, (e.Value.Index + 1) - startIndex).Trim();
 
-                result.Add(new Entities.Sentence(Line, text));
+                result.Add(new NLPEnvironment.Entities.Sentence(Line, text));
 
 
                 startIndex = e.Value.Index + 1;

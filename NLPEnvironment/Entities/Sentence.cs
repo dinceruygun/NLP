@@ -4,12 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Entities
+namespace NLPEnvironment.Entities
 {
     [System.Diagnostics.DebuggerDisplay("{ToString()}")]
-    public class Word
+    public class Sentence
     {
+        Line _line;
         string _text;
+
+        public Line Line
+        {
+            get
+            {
+                return _line;
+            }
+
+            set
+            {
+                _line = value;
+            }
+        }
 
         public string Text
         {
@@ -24,17 +38,18 @@ namespace Tokenizer.Entities
             }
         }
 
-        public SyllableCollection Syllable { get; internal set; }
+        public WordCollection WordList { get; set; }
 
-        public Word()
+        public Sentence()
         {
 
         }
 
 
-        public Word(string text)
+        public Sentence(Line line, string text)
         {
-            _text = text;
+            this._line = line;
+            this._text = text;
         }
 
 

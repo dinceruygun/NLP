@@ -13,7 +13,10 @@ namespace TokenizerTest
         static void Main(string[] args)
         {
 
-            var aa = ToTurkish.TurkishCharacters;
+            var testdata = "dincercigim";
+
+
+            var d = testdata.ToTurkish();
 
 
             var data = @"DEV DALGALAR OLUŞTU
@@ -29,7 +32,7 @@ namespace TokenizerTest
 
 
 
-            tokenizer.Parse();
+            var result = tokenizer.Parse();
 
         }
     }

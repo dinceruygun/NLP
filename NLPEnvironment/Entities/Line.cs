@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Entities
+namespace NLPEnvironment.Entities
 {
     [System.Diagnostics.DebuggerDisplay("{ToString()}")]
     public class Line: TokenizerEntity
@@ -24,7 +24,7 @@ namespace Tokenizer.Entities
             }
         }
 
-        public SentenceCollection SentenceList { get; internal set; }
+        public SentenceCollection SentenceList { get; set; }
 
         public Line()
         {

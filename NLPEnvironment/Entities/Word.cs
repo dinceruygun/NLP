@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Entities
+namespace NLPEnvironment.Entities
 {
     [System.Diagnostics.DebuggerDisplay("{ToString()}")]
-    public class Syllable
+    public class Word
     {
         string _text;
 
@@ -18,20 +18,21 @@ namespace Tokenizer.Entities
                 return _text;
             }
 
-            internal set
+            set
             {
                 _text = value;
             }
         }
 
+        public SyllableCollection Syllable { get; set; }
 
-        public Syllable()
+        public Word()
         {
-               
+
         }
 
 
-        public Syllable(string text)
+        public Word(string text)
         {
             _text = text;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLPExtention;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,15 +28,15 @@ namespace Tokenizer
 
 
 
-        public void Parse(string Text)
+        public NLPEnvironment.Entities.LineCollection Parse(string Text)
         {
             this._baseText = Text;
-            this.Parse();
+            return this.Parse();
         }
 
-        public void Parse()
+        public NLPEnvironment.Entities.LineCollection Parse()
         {
-            if (string.IsNullOrEmpty(BaseText)) return;
+            if (string.IsNullOrEmpty(BaseText)) return null;
 
             var lineParser = new Parser.Line();
             var sentenceParser = new Parser.Sentence();
@@ -56,14 +57,17 @@ namespace Tokenizer
 
                     foreach (var word in sentence.WordList)
                     {
+                        word.Text = word.Text.ToTurkish();
                         word.Syllable = syllableParser.Parse(word);
                     }
 
                 }
 
             }
-            
 
+
+
+            return lines;
 
         }
 

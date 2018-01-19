@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Entities
+namespace NLPEnvironment.Entities
 {
     public class SentenceCollection : IList<Sentence>
     {

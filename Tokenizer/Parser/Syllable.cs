@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tokenizer.Entities;
+
 
 namespace Tokenizer.Parser
 {
     public class Syllable
     {
-        Entities.Word _word;
+        NLPEnvironment.Entities.Word _word;
 
-        public Entities.Word Word
+        public NLPEnvironment.Entities.Word Word
         {
             get
             {
@@ -32,14 +32,14 @@ namespace Tokenizer.Parser
 
 
 
-        public Syllable(Entities.Word word)
+        public Syllable(NLPEnvironment.Entities.Word word)
         {
             _word = word;
         }
 
 
 
-        public Entities.SyllableCollection Parse(Entities.Word word)
+        public NLPEnvironment.Entities.SyllableCollection Parse(NLPEnvironment.Entities.Word word)
         {
             _word = word;
 
@@ -47,13 +47,13 @@ namespace Tokenizer.Parser
         }
 
 
-        public Entities.SyllableCollection Parse()
+        public NLPEnvironment.Entities.SyllableCollection Parse()
         {
             if (Word == null) return null;
 
 
-            var result = new Entities.SyllableCollection();
-            var tempWord = new Entities.Syllable();
+            var result = new NLPEnvironment.Entities.SyllableCollection();
+            var tempWord = new NLPEnvironment.Entities.Syllable();
 
 
 
@@ -102,7 +102,7 @@ namespace Tokenizer.Parser
                         if (!lastWasVowel)
                         {
                             result.Add(tempWord);
-                            tempWord = new Entities.Syllable();
+                            tempWord = new NLPEnvironment.Entities.Syllable();
                         }
 
                         lastWasVowel = true;
@@ -116,7 +116,7 @@ namespace Tokenizer.Parser
                 if (tempWord?.Text?.Length > 0)
                 {
                     if (result.Count == 0) { }
-                    else { result.Last().Text += tempWord.Text; tempWord = new Entities.Syllable(); }
+                    else { result.Last().Text += tempWord.Text; tempWord = new NLPEnvironment.Entities.Syllable(); }
                 }
             }
 

@@ -18,3 +18,5 @@ C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPExtention.
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPExtention.pdb
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPEnvironment.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPEnvironment.pdb

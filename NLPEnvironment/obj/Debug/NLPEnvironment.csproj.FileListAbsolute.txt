@@ -1,0 +1,4 @@
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\NLPEnvironment.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\NLPEnvironment.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\obj\Debug\NLPEnvironment.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\obj\Debug\NLPEnvironment.pdb

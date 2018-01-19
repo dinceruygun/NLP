@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Tokenizer.Parser
 {
     public class Line
@@ -31,19 +32,19 @@ namespace Tokenizer.Parser
         }
 
 
-        public Entities.LineCollection Parse()
+        public NLPEnvironment.Entities.LineCollection Parse()
         {
             if (string.IsNullOrEmpty(BaseText)) return null;
 
 
-            var result = new Entities.LineCollection();
+            var result = new NLPEnvironment.Entities.LineCollection();
 
-            result.AddRange(BaseText.Split(Environment.NewLine.ToCharArray()).Where(s => s != "").Select(s => new Entities.Line(s.Trim())).ToArray());
+            result.AddRange(BaseText.Split(Environment.NewLine.ToCharArray()).Where(s => s != "").Select(s => new NLPEnvironment.Entities.Line(s.Trim())).ToArray());
 
             return result;
         }
 
-        public Entities.LineCollection Parse(string Text)
+        public NLPEnvironment.Entities.LineCollection Parse(string Text)
         {
             this._baseText = Text;
 
