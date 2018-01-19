@@ -40,13 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Escape\Dot.cs" />
-    <Compile Include="Escape\EscapeCharacter.cs" />
-    <Compile Include="Escape\EscapeControl.cs" />
-    <Compile Include="Escape\EscapeFactory.cs" />
-    <Compile Include="Escape\EscapeItem.cs" />
-    <Compile Include="Escape\EscapeType.cs" />
-    <Compile Include="Escape\WordShort.cs" />
     <Compile Include="Parser\Line.cs" />
     <Compile Include="Parser\Sentence.cs" />
     <Compile Include="Parser\Syllable.cs" />
@@ -63,9 +56,6 @@
       <Project>{7b8e2c25-312d-4fd1-8112-c985821a0057}</Project>
       <Name>NLPExtention</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Container\ShortList.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

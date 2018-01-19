@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Escape
+namespace NLPEnvironment.Escape
 {
     public static class EscapeFactory
     {
@@ -22,6 +22,13 @@ namespace Tokenizer.Escape
                         _escapeCharacters = new List<EscapeCharacter>();
 
                         _escapeCharacters.Add(new Dot());
+                        _escapeCharacters.Add(new Comma());
+                        _escapeCharacters.Add(new Brackets());
+                        _escapeCharacters.Add(new Speak());
+                        _escapeCharacters.Add(new Question());
+                        _escapeCharacters.Add(new Warning());
+                        _escapeCharacters.Add(new Colon());
+                        _escapeCharacters.Add(new Dash());
                     }
                 }
 

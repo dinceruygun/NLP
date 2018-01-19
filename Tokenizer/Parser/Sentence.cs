@@ -49,7 +49,7 @@ namespace Tokenizer.Parser
 
 
             var result = new NLPEnvironment.Entities.SentenceCollection();
-            var escapeControl = new Escape.EscapeControl();
+            var escapeControl = new NLPEnvironment.Escape.EscapeControl();
 
 
             var escapeList = escapeControl.CheckEscape(Line.Text);
@@ -65,7 +65,7 @@ namespace Tokenizer.Parser
 
 
             var startIndex = 0;
-            foreach (var e in escapeList.Where(e => e.Value.EscapeType == Escape.EscapeType.END))
+            foreach (var e in escapeList.Where(e => e.Value.EscapeType == NLPEnvironment.Escape.EscapeType.END))
             {
                 var text = Line.Text.Substring(startIndex, (e.Value.Index + 1) - startIndex).Trim();
 

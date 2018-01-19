@@ -349,7 +349,7 @@ namespace NLPExtention
             {
                 currentChar = turkishString[index].ToString();
 
-                string x = TurkishDowncaseAsciifyTable[currentChar];
+                string x = TurkishDowncaseAsciifyTable.ContainsKey(currentChar) ? TurkishDowncaseAsciifyTable[currentChar] : null;
 
                 if (x == null)
                 {
@@ -411,7 +411,7 @@ namespace NLPExtention
         {
             string ch = c;
 
-            string tr = TurkishDowncaseAsciifyTable[ch];
+            string tr = TurkishDowncaseAsciifyTable.ContainsKey(ch) ? TurkishDowncaseAsciifyTable[ch] : null;
             if (tr == null)
                 tr = ch;
 

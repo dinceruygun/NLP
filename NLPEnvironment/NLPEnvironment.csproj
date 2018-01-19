@@ -46,10 +46,36 @@
     <Compile Include="Entities\SentenceCollection.cs" />
     <Compile Include="Entities\Syllable.cs" />
     <Compile Include="Entities\SyllableCollection.cs" />
+    <Compile Include="Entities\SyllableEscape.cs" />
+    <Compile Include="Entities\SyllableNormal.cs" />
+    <Compile Include="Entities\ISyllableType.cs" />
     <Compile Include="Entities\TokenizerEntity.cs" />
     <Compile Include="Entities\Word.cs" />
     <Compile Include="Entities\WordCollection.cs" />
+    <Compile Include="Escape\Brackets.cs" />
+    <Compile Include="Escape\Colon.cs" />
+    <Compile Include="Escape\Comma.cs" />
+    <Compile Include="Escape\Dash.cs" />
+    <Compile Include="Escape\Dot.cs" />
+    <Compile Include="Escape\EscapeCharacter.cs" />
+    <Compile Include="Escape\EscapeControl.cs" />
+    <Compile Include="Escape\EscapeFactory.cs" />
+    <Compile Include="Escape\EscapeItem.cs" />
+    <Compile Include="Escape\EscapeType.cs" />
+    <Compile Include="Escape\Question.cs" />
+    <Compile Include="Escape\Speak.cs" />
+    <Compile Include="Escape\Warning.cs" />
+    <Compile Include="Escape\WordShort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NLPExtention\NLPExtention.csproj">
+      <Project>{7b8e2c25-312d-4fd1-8112-c985821a0057}</Project>
+      <Name>NLPExtention</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Container\ShortList.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

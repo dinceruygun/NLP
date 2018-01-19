@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Escape
+namespace NLPEnvironment.Escape
 {
     public class WordShort
     {
@@ -47,7 +47,7 @@ namespace Tokenizer.Escape
         private string LoadShortTextFile()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = "Tokenizer.Container.ShortList.txt";
+            var resourceName = "NLPEnvironment.Container.ShortList.txt";
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             using (StreamReader reader = new StreamReader(stream))

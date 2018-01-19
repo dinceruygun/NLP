@@ -10,6 +10,8 @@ namespace NLPEnvironment.Entities
     public class Syllable
     {
         string _text;
+        public ISyllableType SyllableType { get; set; }
+
 
         public string Text
         {
@@ -23,7 +25,6 @@ namespace NLPEnvironment.Entities
                 _text = value;
             }
         }
-
 
         public Syllable()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tokenizer.Escape
+namespace NLPEnvironment.Escape
 {
     public enum EscapeType
     {

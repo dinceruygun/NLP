@@ -2,3 +2,8 @@ C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\NLPEnvironme
 C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\NLPEnvironment.pdb
 C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\obj\Debug\NLPEnvironment.dll
 C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\obj\Debug\NLPEnvironment.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\NLPExtention.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\NLPExtention.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NLPEnvironment\obj\Debug\NLPEnvironment.csprojResolveAssemblyReference.cache
