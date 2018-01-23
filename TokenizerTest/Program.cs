@@ -13,7 +13,7 @@ namespace TokenizerTest
         static void Main(string[] args)
         {
 
-            var testdata = "Istanbulluoglu";
+            var testdata = "dnçer";
             var d = testdata.ToTurkish();
 
 

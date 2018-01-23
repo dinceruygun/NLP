@@ -21,7 +21,10 @@ namespace NLPEnvironment.Escape
 
         public void LoadShortList()
         {
-            var text = LoadShortTextFile();
+            var containerReader = new Container.ContainerReader();
+
+            var text = containerReader.Read(Container.ContainerName.SHORTLIST);
+
             ShortList = new Dictionary<string, string>();
 
 
@@ -43,17 +46,5 @@ namespace NLPEnvironment.Escape
 
         }
 
-
-        private string LoadShortTextFile()
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = "NLPEnvironment.Container.ShortList.txt";
-
-            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
-        }
     }
 }

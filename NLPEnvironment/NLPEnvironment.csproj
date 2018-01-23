@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container\ContainerReader.cs" />
     <Compile Include="Entities\Line.cs" />
     <Compile Include="Entities\LineCollection.cs" />
     <Compile Include="Entities\Sentence.cs" />
@@ -77,6 +78,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Container\ShortList.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Container\Morphological.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
