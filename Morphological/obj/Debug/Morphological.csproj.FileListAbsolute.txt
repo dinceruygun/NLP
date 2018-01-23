@@ -1,0 +1,11 @@
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\Morphological.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\Morphological.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\NLPEnvironment.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\NLPExtention.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\NLPEnvironment.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\NLPExtention.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\obj\Debug\Morphological.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\obj\Debug\Morphological.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\Morphological\obj\Debug\Morphological.pdb

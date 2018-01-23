@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLPEnvironment", "NLPEnviro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morphological", "Morphological\Morphological.csproj", "{4DA646C9-3C05-4377-B3E7-3C243CBD1F30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphologicalTest", "MorphologicalTest\MorphologicalTest.csproj", "{2E0944CE-C98F-46E3-9679-DCE2F03D1A7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4DA646C9-3C05-4377-B3E7-3C243CBD1F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DA646C9-3C05-4377-B3E7-3C243CBD1F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DA646C9-3C05-4377-B3E7-3C243CBD1F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0944CE-C98F-46E3-9679-DCE2F03D1A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0944CE-C98F-46E3-9679-DCE2F03D1A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0944CE-C98F-46E3-9679-DCE2F03D1A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0944CE-C98F-46E3-9679-DCE2F03D1A7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

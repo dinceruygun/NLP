@@ -25,6 +25,7 @@ namespace NLPEnvironment.Entities
         }
 
         public SyllableCollection Syllable { get; set; }
+        public Word Root { get; set; }
 
         public Word()
         {

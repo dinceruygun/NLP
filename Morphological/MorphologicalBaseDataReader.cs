@@ -18,12 +18,22 @@ namespace Morphological
             var text = containerReader.Read(ContainerName.MORPHOLOGICAL);
 
 
-            var splitText = text.Split(Environment.NewLine.ToCharArray()).Where(t => (t.Trim()[0] != '#'));
+            var splitText = text.Split(Environment.NewLine.ToCharArray()).Where(t => !string.IsNullOrEmpty(t)).Where(t => (t.Trim()[0] != '#'));
 
 
-            foreach (var item in splitText)
+            foreach (var row in splitText)
             {
+                var cols = row.Split('\t');
 
+
+                var newWord = new Word()
+                {
+                    Text = cols[0],
+                    Root = new Word(cols[1])
+                };
+
+
+                result.Add(newWord);
             }
 
 

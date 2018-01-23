@@ -1,0 +1,14 @@
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\MorphologicalTest.exe.config
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\MorphologicalTest.exe
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\MorphologicalTest.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\Morphological.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\NLPEnvironment.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\NLPExtention.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\Morphological.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\NLPEnvironment.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\NLPExtention.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\obj\Debug\MorphologicalTest.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\obj\Debug\MorphologicalTest.exe
+C:\Users\dincer.uygun\Documents\GitHub\NLP\MorphologicalTest\obj\Debug\MorphologicalTest.pdb

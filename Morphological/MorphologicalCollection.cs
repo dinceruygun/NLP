@@ -23,7 +23,7 @@ namespace Morphological
                         if (_wordList == null)
                         {
                             var reader = new MorphologicalBaseDataReader();
-                            var data = reader.Read();
+                            _wordList = reader.Read();
                         }
                     }
                 }

@@ -50,6 +50,10 @@
       <Project>{50e25299-8aac-4d1f-bb58-ba57f92c6c61}</Project>
       <Name>NLPEnvironment</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NLPExtention\NLPExtention.csproj">
+      <Project>{7b8e2c25-312d-4fd1-8112-c985821a0057}</Project>
+      <Name>NLPExtention</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
