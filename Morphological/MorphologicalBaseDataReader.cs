@@ -29,7 +29,8 @@ namespace Morphological
                 var newWord = new Word()
                 {
                     Text = cols[0],
-                    Root = new Word(cols[1])
+                    Root = new Word(cols[1]),
+                    Morphologic = cols[2].Split('+').Select(m => new MorphologicItem(m)).ToList()
                 };
 
 

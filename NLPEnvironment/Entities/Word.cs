@@ -39,6 +39,7 @@ namespace NLPEnvironment.Entities
 
         public Word SpellWord { get; set; }
         public List<SimilarWord> SimilarWordList { get; set; }
+        public List<MorphologicItem> Morphologic { get; set; }
 
         public Word()
         {
