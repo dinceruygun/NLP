@@ -13,22 +13,15 @@ namespace TokenizerTest
         static void Main(string[] args)
         {
 
-            var testdata = "dnçer";
-            var d = testdata.ToTurkish();
-
-
-
-
-
-
 
 
 
             var data = @"DEV DALGALAR OLUŞTU
 
-                                                İstanbul'da sabah saatlerinden itibaren etkili olan lodos nedeniyle deniz seferlerinde aksamalar yaşanıyor. Etkili olan lodos denizde dev dalgalar oluşturdu. İstanbul Boğazı kıyılarında lodos nedeniyle dalgaların sahile çarpmasıyla su seviyesi 3-4 metre yüksekliğe kadar çıktı.
+                                                Istanbul'da sabah saatlerinden itibaren etkili olan lodos nedeniyle deniz seferlerinde aksamalar yasaniyor. Etkili olan lodos denizde dev dalgalar olusturdu. Istanbul Bogazi kiyilarinda lodos nedeniyle dalglarin sahile carpmasyla su seviyesi 3-4 metre yukseklige kadar cıktı.
 
                                                 Olumsuz hava koşulları nedeniyle İDO ve BUDO da bazı seferler iptal edildi.";
+
 
 
 

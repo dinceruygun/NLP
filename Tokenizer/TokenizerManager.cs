@@ -1,4 +1,5 @@
-﻿using NLPExtention;
+﻿using Morphological;
+using NLPExtention;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,7 @@ namespace Tokenizer
             var sentenceParser = new Parser.Sentence();
             var wordParser = new Parser.Word();
             var syllableParser = new Parser.Syllable();
+            var morphManager = new MorphologicalManager();
 
 
 
@@ -58,6 +60,20 @@ namespace Tokenizer
                     foreach (var word in sentence.WordList)
                     {
                         word.Text = word.Text.ToTurkish();
+                        var morphList = morphManager.SimilarWords(word);
+
+                        if (morphList != null)
+                        {
+                            word.SimilarWordList = morphList.WordList;
+
+                            if (morphList.SelectWord != null)
+                            {
+                                word.SpellWord = morphList.SelectWord;
+                            }
+                        }
+
+
+
                         word.Syllable = syllableParser.Parse(word);
                     }
 

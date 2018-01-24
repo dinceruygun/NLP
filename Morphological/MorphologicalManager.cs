@@ -10,28 +10,6 @@ using System.Threading.Tasks;
 namespace Morphological
 {
 
-    [System.Diagnostics.DebuggerDisplay("{ToString()}")]
-    public class SimilarWord
-    {
-        public int Distance { get; set; }
-        public Word Similar { get; set; }
-
-
-        public override string ToString()
-        {
-            return $"{Similar.Text}, {Distance}";
-        }
-    }
-
-
-    public class SimilarWordResult
-    {
-        public List<SimilarWord> WordList = new List<SimilarWord>();
-        public TimeSpan PassingTime { get; set; }
-        public Word SelectWord { get; set; }
-    }
-
-
     public class MorphologicalManager
     {
 
@@ -94,29 +72,38 @@ namespace Morphological
 
 
                 var minDistance = result.WordList.OrderBy(w => w.Distance).First().Distance;
-                var selectWords = result.WordList.Where(w => w.Distance == minDistance);
+                var selectWords = result.WordList.Where(w => w.Distance == minDistance).ToList();
 
-                var wordNumeric = word.Text.TextToNumeric();
 
-                var wordNumericGroup = wordNumeric.GroupBy(x => x)
-                                                    .OrderByDescending(x => x.Count())
-                                                    .Select(x => x.Key)
-                                                    .ToList();
-
-                foreach (var item in selectWords)
+                if (selectWords.Count == 1)
                 {
-                    var n = item.Similar.Text.TextToNumeric();
+                    result.SelectWord = selectWords[0].Similar;
+                }
+                else
+                {
 
-                    var ng = n.GroupBy(x => x)
-                                .OrderByDescending(x => x.Count())
-                                .Select(x => x.Key)
-                                .ToList();
+                    var wordNumeric = word.Text.TextToNumeric();
 
-                    if (wordNumericGroup.SequenceEqual(ng))
+                    var wordNumericGroup = wordNumeric.GroupBy(x => x)
+                                                        .OrderByDescending(x => x.Count())
+                                                        .Select(x => x.Key)
+                                                        .ToList();
+
+                    foreach (var item in selectWords)
                     {
-                        result.SelectWord = item.Similar;
-                    }
+                        var n = item.Similar.Text.TextToNumeric();
 
+                        var ng = n.GroupBy(x => x)
+                                    .OrderByDescending(x => x.Count())
+                                    .Select(x => x.Key)
+                                    .ToList();
+
+                        if (wordNumericGroup.SequenceEqual(ng))
+                        {
+                            result.SelectWord = item.Similar;
+                        }
+
+                    }
                 }
             }
 

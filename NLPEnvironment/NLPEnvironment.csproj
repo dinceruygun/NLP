@@ -45,6 +45,7 @@
     <Compile Include="Entities\LineCollection.cs" />
     <Compile Include="Entities\Sentence.cs" />
     <Compile Include="Entities\SentenceCollection.cs" />
+    <Compile Include="Entities\SimilarWord.cs" />
     <Compile Include="Entities\Syllable.cs" />
     <Compile Include="Entities\SyllableCollection.cs" />
     <Compile Include="Entities\SyllableEscape.cs" />

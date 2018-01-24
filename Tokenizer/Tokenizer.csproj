@@ -48,6 +48,10 @@
     <Compile Include="TokenizerManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Morphological\Morphological.csproj">
+      <Project>{4da646c9-3c05-4377-b3e7-3c243cbd1f30}</Project>
+      <Name>Morphological</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NLPEnvironment\NLPEnvironment.csproj">
       <Project>{50e25299-8aac-4d1f-bb58-ba57f92c6c61}</Project>
       <Name>NLPEnvironment</Name>
