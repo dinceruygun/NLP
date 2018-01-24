@@ -17,7 +17,7 @@ namespace MorphologicalTest
 
 
 
-            var result = manager.WordCompare(word);
+            var result = manager.SimilarWords(word);
         }
 
     }

@@ -37,7 +37,7 @@ namespace Morphological
 
         private int similarRate = 30;
 
-        public SimilarWordResult WordCompare(Word word)
+        public SimilarWordResult SimilarWords(Word word)
         {
 
 
@@ -53,7 +53,11 @@ namespace Morphological
             var result = new SimilarWordResult();
 
 
-            foreach (var collection in MorphologicalCollection.WordIndexList)
+
+
+
+
+            Parallel.ForEach(MorphologicalCollection.WordIndexList, collection =>
             {
                 if (word.Length >= collection.Key - (similarRate / 10) && word.Length <= collection.Key + (similarRate / 10))
                 {
@@ -71,7 +75,7 @@ namespace Morphological
                         }
                     }
                 }
-            }
+            });
 
 
 
@@ -81,38 +85,41 @@ namespace Morphological
 
 
 
-            if(result.WordList.Count == 1)
+            if (result.WordList.Count == 1)
             {
                 result.SelectWord = result.WordList[0].Similar;
-                return result;
             }
-
-
-            var minDistance = result.WordList.OrderBy(w => w.Distance).First().Distance;
-            var selectWords = result.WordList.Where(w => w.Distance == minDistance);
-
-            var wordNumeric = word.Text.TextToNumeric();
-
-            var wordNumericGroup = wordNumeric.GroupBy(x => x)
-                                                .OrderByDescending(x => x.Count())
-                                                .Select(x => x.Key)
-                                                .ToList();
-
-            foreach (var item in selectWords)
+            else
             {
-                var n = item.Similar.Text.TextToNumeric();
 
-                var ng = n.GroupBy(x => x)
-                            .OrderByDescending(x => x.Count())
-                            .Select(x => x.Key)
-                            .ToList();
 
-                if(wordNumericGroup.SequenceEqual(ng))
+                var minDistance = result.WordList.OrderBy(w => w.Distance).First().Distance;
+                var selectWords = result.WordList.Where(w => w.Distance == minDistance);
+
+                var wordNumeric = word.Text.TextToNumeric();
+
+                var wordNumericGroup = wordNumeric.GroupBy(x => x)
+                                                    .OrderByDescending(x => x.Count())
+                                                    .Select(x => x.Key)
+                                                    .ToList();
+
+                foreach (var item in selectWords)
                 {
-                    result.SelectWord = item.Similar;
-                }
+                    var n = item.Similar.Text.TextToNumeric();
 
+                    var ng = n.GroupBy(x => x)
+                                .OrderByDescending(x => x.Count())
+                                .Select(x => x.Key)
+                                .ToList();
+
+                    if (wordNumericGroup.SequenceEqual(ng))
+                    {
+                        result.SelectWord = item.Similar;
+                    }
+
+                }
             }
+
 
 
             sw.Stop();
