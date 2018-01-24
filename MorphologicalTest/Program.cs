@@ -13,7 +13,7 @@ namespace MorphologicalTest
         static void Main(string[] args)
         {
             var manager = new MorphologicalManager();
-            var word = new Word("cmhurbaşkanım");
+            var word = new Word("dnçer");
 
 
 

@@ -10,6 +10,7 @@ namespace NLPEnvironment.Entities
     public class Word
     {
         string _text;
+        int _length;
 
         public string Text
         {
@@ -21,11 +22,20 @@ namespace NLPEnvironment.Entities
             set
             {
                 _text = value;
+                _length = _text.Length;
             }
         }
 
         public SyllableCollection Syllable { get; set; }
         public Word Root { get; set; }
+
+        public int Length
+        {
+            get
+            {
+                return _length;
+            }
+        }
 
         public Word()
         {
@@ -36,6 +46,7 @@ namespace NLPEnvironment.Entities
         public Word(string text)
         {
             _text = text;
+            _length = _text.Length;
         }
 
 
