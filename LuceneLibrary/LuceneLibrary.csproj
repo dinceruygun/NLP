@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LuceneDocument.cs" />
+    <Compile Include="LuceneDocumentCollection.cs" />
     <Compile Include="LuceneManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -12,7 +12,7 @@ namespace LuceneManagerTest
         static void Main(string[] args)
         {
             var manager = new LuceneManager();
-
+            manager.AddSchema("nlp");
         }
     }
 }
