@@ -15,8 +15,10 @@ namespace LuceneLibrary
         string _schemaPath;
         string _schemaDocName = "schema";
 
+        
 
         LuceneDocumentCollection _luceneDocumentCollection;
+        LuceneSchemaCollection _luceneSchemaCollection;
 
         public LuceneManager()
         {
@@ -33,6 +35,7 @@ namespace LuceneLibrary
             CheckDirectory(_schemaPath);
 
             _luceneDocumentCollection = new LuceneDocumentCollection();
+            _luceneSchemaCollection = new LuceneSchemaCollection();
 
 
             var doc = new LuceneDocument(_schemaPath);
@@ -52,19 +55,33 @@ namespace LuceneLibrary
             if (table == null) return;
 
 
-            foreach (var item in table.Rows)
+            foreach (DataRow row in table.Rows)
             {
-
+                _luceneSchemaCollection.Add(new LuceneSchema(row["name"].ToString(), row["id"].ToString()));
             }
 
         }
 
-        
+
+
+        public bool ExistSchema(string schemaName)
+        {
+            if (string.IsNullOrEmpty(schemaName)) return false;
+
+            if (_luceneSchemaCollection[schemaName] == null) return false;
+
+            return true;
+        }
+
+
         public bool AddSchema(string schemaName)
         {
-            var doc = _luceneDocumentCollection[_schemaDocName];
+            if (_luceneSchemaCollection[schemaName] != null) throw new DuplicateWaitObjectException();
 
-            var t = new DataTable(_schemaDocName);
+
+            var doc = _luceneDocumentCollection[_schemaDocName.Trim()];
+
+            var t = new DataTable(_schemaDocName.Trim());
             t.Columns.Add("name");
             t.Columns.Add("id");
 

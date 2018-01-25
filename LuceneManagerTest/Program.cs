@@ -1,6 +1,7 @@
 ﻿using LuceneLibrary;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,9 @@ namespace LuceneManagerTest
         static void Main(string[] args)
         {
             var manager = new LuceneManager();
-            manager.AddSchema("nlp");
+            if (!manager.ExistSchema("nlp")) manager.AddSchema("nlp");
+
+            var table = new DataTable("test");
         }
     }
 }

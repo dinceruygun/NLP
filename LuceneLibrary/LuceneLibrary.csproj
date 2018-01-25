@@ -51,6 +51,8 @@
     <Compile Include="LuceneDocument.cs" />
     <Compile Include="LuceneDocumentCollection.cs" />
     <Compile Include="LuceneManager.cs" />
+    <Compile Include="LuceneSchema.cs" />
+    <Compile Include="LuceneSchemaCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
