@@ -1,0 +1,9 @@
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\bin\Debug\LuceneLibrary.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\bin\Debug\LuceneLibrary.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\bin\Debug\Lucene.Net.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\bin\Debug\Lucene.Net.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\bin\Debug\Lucene.Net.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\obj\Debug\LuceneLibrary.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\obj\Debug\LuceneLibrary.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneLibrary\obj\Debug\LuceneLibrary.pdb

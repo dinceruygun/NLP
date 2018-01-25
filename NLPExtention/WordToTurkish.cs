@@ -379,7 +379,7 @@ namespace NLPExtention
             while (i >= 0 && index >= 0)
             {
                 currentChar = turkishString[index].ToString();
-                string x = TurkishUpcaseAccentsTable[currentChar];
+                string x = TurkishUpcaseAccentsTable.ContainsKey(currentChar) ? TurkishUpcaseAccentsTable[currentChar] : null;
 
                 if (x == null)
                 {

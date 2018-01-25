@@ -1,0 +1,8 @@
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\bin\Debug\LuceneManagerTest.exe.config
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\bin\Debug\LuceneManagerTest.exe
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\bin\Debug\LuceneManagerTest.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\bin\Debug\LuceneLibrary.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\bin\Debug\LuceneLibrary.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\obj\Debug\LuceneManagerTest.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\obj\Debug\LuceneManagerTest.exe
+C:\Users\dincer.uygun\Documents\GitHub\NLP\LuceneManagerTest\obj\Debug\LuceneManagerTest.pdb

@@ -89,6 +89,10 @@ namespace Morphological
                                                         .Select(x => x.Key)
                                                         .ToList();
 
+
+                    var c1 = 0;
+                    var c2 = 0;
+
                     foreach (var item in selectWords)
                     {
                         var n = item.Similar.Text.TextToNumeric();
@@ -98,11 +102,21 @@ namespace Morphological
                                     .Select(x => x.Key)
                                     .ToList();
 
-                        if (wordNumericGroup.SequenceEqual(ng))
+
+                        
+                        foreach (var w in wordNumericGroup)
                         {
-                            result.SelectWord = item.Similar;
+                            if (ng.Contains(w)) c1++;
                         }
 
+                        if (c1 > c2)
+                        {
+                            result.SelectWord = item.Similar;
+                            c2 = c1;
+                        }
+
+
+                        c1 = 0;
                     }
                 }
             }
