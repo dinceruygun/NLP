@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace LuceneLibrary
     {
         string _name;
         string _id;
+        Dictionary<string, DataTable> _tableList;
 
         public string Id
         {
@@ -40,12 +42,13 @@ namespace LuceneLibrary
 
         public LuceneSchema()
         {
-
+            _tableList = new Dictionary<string, DataTable>();
         }
 
 
-        public LuceneSchema(string name, string id)
+        public LuceneSchema(string name, string id) : this()
         {
+
             _name = name;
             _id = id;
         }

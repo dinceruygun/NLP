@@ -47,6 +47,13 @@ namespace LuceneLibrary
         }
 
 
+        public void Index(string schemaName, DataTable table)
+        {
+            
+            throw new NotImplementedException();
+        }
+
+
         private void LoadSchema()
         {
             var doc = _luceneDocumentCollection[_schemaDocName];
