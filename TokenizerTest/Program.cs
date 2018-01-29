@@ -1,4 +1,5 @@
-﻿using NLPExtention;
+﻿using NlpAnalyseLibrary;
+using NLPExtention;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,12 @@ namespace TokenizerTest
 
 
             var result = tokenizer.Parse();
+
+
+
+            var manager = new AnalyseManager();
+
+            manager.Analyse(result);
 
         }
     }

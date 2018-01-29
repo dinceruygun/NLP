@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NlpAnalyseLibrary\NlpAnalyseLibrary.csproj">
+      <Project>{7f8188b6-5b6d-49d4-82a9-a13aeedbabf2}</Project>
+      <Name>NlpAnalyseLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NLPEnvironment\NLPEnvironment.csproj">
       <Project>{50e25299-8aac-4d1f-bb58-ba57f92c6c61}</Project>
       <Name>NLPEnvironment</Name>

@@ -1,0 +1,16 @@
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\NlpAnalyseAddress.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\NlpAnalyseAddress.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\LuceneLibrary.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\NLPEnvironment.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\Lucene.Net.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\NLPExtention.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\LuceneLibrary.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\NLPEnvironment.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\Lucene.Net.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\Lucene.Net.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\NLPExtention.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\obj\Debug\NlpAnalyseAddress.csprojResolveAssemblyReference.cache
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\obj\Debug\NlpAnalyseAddress.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\NlpAnalyseAddress\obj\Debug\NlpAnalyseAddress.pdb

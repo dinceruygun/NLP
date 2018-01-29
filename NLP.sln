@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneManagerTest", "Lucene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneAddressIndex", "LuceneAddressIndex\LuceneAddressIndex.csproj", "{C7053AF0-7576-4314-A0DF-C62A287E8773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NlpAnalyseAddress", "NlpAnalyseAddress\NlpAnalyseAddress.csproj", "{5103F3FB-2A76-4C97-AE05-E49EEB393F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NlpAnalyseLibrary", "NlpAnalyseLibrary\NlpAnalyseLibrary.csproj", "{7F8188B6-5B6D-49D4-82A9-A13AEEDBABF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5103F3FB-2A76-4C97-AE05-E49EEB393F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5103F3FB-2A76-4C97-AE05-E49EEB393F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5103F3FB-2A76-4C97-AE05-E49EEB393F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5103F3FB-2A76-4C97-AE05-E49EEB393F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F8188B6-5B6D-49D4-82A9-A13AEEDBABF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8188B6-5B6D-49D4-82A9-A13AEEDBABF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8188B6-5B6D-49D4-82A9-A13AEEDBABF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8188B6-5B6D-49D4-82A9-A13AEEDBABF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

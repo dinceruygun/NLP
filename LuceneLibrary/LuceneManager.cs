@@ -36,6 +36,10 @@ namespace LuceneLibrary
             init();
         }
 
+        public DataTable Query(string schemaName, string indexName, string find)
+        {
+            throw new NotImplementedException();
+        }
 
         private void init()
         {

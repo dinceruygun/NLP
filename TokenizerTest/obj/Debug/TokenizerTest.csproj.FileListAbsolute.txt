@@ -22,3 +22,12 @@ C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPEnvironmen
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NLPEnvironment.pdb
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Morphological.dll
 C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Morphological.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NlpAnalyseLibrary.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NlpAnalyseAddress.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NlpAnalyseLibrary.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\NlpAnalyseAddress.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\LuceneLibrary.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Lucene.Net.dll
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\LuceneLibrary.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Lucene.Net.pdb
+C:\Users\dincer.uygun\Documents\GitHub\NLP\TokenizerTest\bin\Debug\Lucene.Net.xml
