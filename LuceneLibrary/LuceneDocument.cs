@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace LuceneLibrary
 {
-    internal class LuceneDocument
+    internal class LuceneDocument:IDisposable
     {
         private Analyzer _Analyzer;
         private Directory _Directory;
@@ -47,10 +47,10 @@ namespace LuceneLibrary
         {
             using (_IndexWriter = new IndexWriter(_Directory, _Analyzer, IndexWriter.MaxFieldLength.UNLIMITED))
             {
-                _Document = new Document();
-
                 foreach (DataRow row in table.Rows)
                 {
+                    _Document = new Document();
+
                     foreach (DataColumn col in table.Columns)
                     {
                         _Document.Add(new Field(col.ColumnName, row[col].ToString(), Field.Store.YES, Field.Index.ANALYZED));
@@ -66,7 +66,9 @@ namespace LuceneLibrary
 
         public DataTable GetAllDocuments()
         {
+            if (!((_Directory as dynamic).Directory as System.IO.DirectoryInfo).Exists) return null;
             if (_Directory.ListAll().Length == 0) return null;
+
 
             _IndexReader = IndexReader.Open(_Directory, true);
 
@@ -114,6 +116,16 @@ namespace LuceneLibrary
             }
 
             return result;
+        }
+
+        public void Dispose()
+        {
+            if (_IndexReader != null)
+                _IndexReader.Dispose();
+            
+
+            _IndexReader = null;
+            _Document = null;
         }
     }
 }

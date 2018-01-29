@@ -11,7 +11,6 @@ namespace LuceneLibrary
     {
         string _name;
         string _id;
-        Dictionary<string, DataTable> _tableList;
 
         public string Id
         {
@@ -42,7 +41,7 @@ namespace LuceneLibrary
 
         public LuceneSchema()
         {
-            _tableList = new Dictionary<string, DataTable>();
+
         }
 
 

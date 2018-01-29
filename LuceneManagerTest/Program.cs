@@ -41,7 +41,11 @@ namespace LuceneManagerTest
 
 
 
-            manager.Index("", table);
+            manager.Index("nlp", table);
+
+
+
+            DataTable data = manager.GetAllDocument("nlp", "test");
 
         }
     }

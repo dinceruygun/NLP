@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneLibrary", "LuceneLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneManagerTest", "LuceneManagerTest\LuceneManagerTest.csproj", "{C34F9FBF-4637-4225-9A04-042F94F04941}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneAddressIndex", "LuceneAddressIndex\LuceneAddressIndex.csproj", "{C7053AF0-7576-4314-A0DF-C62A287E8773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{C34F9FBF-4637-4225-9A04-042F94F04941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C34F9FBF-4637-4225-9A04-042F94F04941}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C34F9FBF-4637-4225-9A04-042F94F04941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7053AF0-7576-4314-A0DF-C62A287E8773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
