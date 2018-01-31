@@ -38,7 +38,25 @@ namespace LuceneLibrary
 
         public DataTable Query(string schemaName, string indexName, string find)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(schemaName)) throw new NullReferenceException("Şema adı boş geçilemez");
+            if (!ExistSchema(schemaName)) throw new NullReferenceException("Şema bulunamadı");
+
+
+            if (string.IsNullOrEmpty(indexName)) throw new NullReferenceException("Index adı boş geçilemez");
+            if (!_indexCollection[schemaName].ContainsKey(indexName)) throw new NullReferenceException("Index bulunamadı");
+
+
+
+
+            var docIndex = new LuceneDocument(Path.Combine(_dataPath, _indexCollection[schemaName][indexName]));
+
+            var result = docIndex.Query(find);
+
+            docIndex.Dispose();
+
+
+
+            return result;
         }
 
         private void init()

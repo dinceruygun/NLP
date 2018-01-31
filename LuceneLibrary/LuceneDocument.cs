@@ -63,6 +63,39 @@ namespace LuceneLibrary
             }
         }
 
+        public DataTable Query(string keyword)
+        {
+            if (!((_Directory as dynamic).Directory as System.IO.DirectoryInfo).Exists) return null;
+            if (_Directory.ListAll().Length == 0) return null;
+
+
+            _IndexReader = IndexReader.Open(_Directory, true);
+
+            _QueryParser = new MultiFieldQueryParser(Lucene.Net.Util.Version.LUCENE_30, _IndexReader.GetFieldNames(IndexReader.FieldOption.ALL).ToArray(), _Analyzer);
+            _Query = _QueryParser.Parse(keyword);
+
+            var docList = new List<Document>();
+
+            using (_IndexSearcher = new IndexSearcher(_Directory, true))
+            {
+                var searchResult = _IndexSearcher.Search(_Query, 10);
+                
+
+                foreach (var loopDoc in searchResult.ScoreDocs.OrderBy(s => s.Score))
+                {
+                    var doc = _IndexSearcher.Doc(loopDoc.Doc);
+                    docList.Add(doc);
+                }
+
+
+            }
+
+
+            var result = DocumentToTable(docList);
+
+
+            return result;
+        }
 
         public DataTable GetAllDocuments()
         {

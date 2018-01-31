@@ -31,9 +31,11 @@ namespace NlpAnalyseAddress
                         {
                             if (word.SpellWord.Root != null)
                             {
-
-
-                                DataTable table =  manager.Query("address", "address", "address");
+                                var equalCountry =  manager.Query("address", "ulkeler", word.SpellWord.Root.Text);
+                                var equalCity = manager.Query("address", "sehirler", word.SpellWord.Root.Text);
+                                var equalDistrict = manager.Query("address", "ilceler", word.SpellWord.Root.Text);
+                                var equalNeighborhood = manager.Query("address", "semtmahalle", word.SpellWord.Root.Text);
+                                
 
 
                             }
@@ -42,5 +44,11 @@ namespace NlpAnalyseAddress
                 }
             }
         }
+
+
+
+        
+
+
     }
 }
