@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="AnalyseFactory.cs" />
     <Compile Include="AnalyseManager.cs" />
-    <Compile Include="AnalyzeIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

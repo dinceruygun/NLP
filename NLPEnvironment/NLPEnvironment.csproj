@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analyze\AnalyzeIndex.cs" />
     <Compile Include="Container\ContainerReader.cs" />
     <Compile Include="Entities\Line.cs" />
     <Compile Include="Entities\LineCollection.cs" />

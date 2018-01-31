@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using NLPEnvironment.Entities;
 using LuceneLibrary;
 using System.Data;
+using NLPEnvironment.Analyze;
 
 namespace NlpAnalyseAddress
 {
@@ -24,6 +25,10 @@ namespace NlpAnalyseAddress
             if (!manager.ExistSchema("address")) manager.AddSchema("address");
 
 
+
+            var analyzeIndexList = new List<AnalyzeIndex>();
+
+
             foreach (var line in lines)
             {
                 foreach (var sentence in line.SentenceList)
@@ -39,10 +44,49 @@ namespace NlpAnalyseAddress
 
                                 if (adresList.Count > 0)
                                 {
+                                    var analyze = new AnalyzeIndex();
 
+                                    analyze.AnalyzeIndexCollection.AddRange(adresList);
+                                    analyze.LineNumber = lines.IndexOf(line);
+                                    analyze.WordNumber = sentence.WordList.IndexOf(word);
+                                    analyze.SentenceNumber = line.SentenceList.IndexOf(sentence);
+
+
+                                    analyzeIndexList.Add(analyze);
                                 }
                             }
                         }
+                    }
+                }
+            }
+
+
+
+
+            ClearAddressIndex(ref analyzeIndexList, lines);
+
+
+
+        }
+
+
+
+
+        private void ClearAddressIndex(ref List<AnalyzeIndex> analyzeIndexList, LineCollection lines)
+        {
+            if (analyzeIndexList == null) return;
+
+            foreach (var index in analyzeIndexList)
+            {
+                foreach (var analyze in index.AnalyzeIndexCollection)
+                {
+                    var address = (analyze as AddressItem);
+
+                    var addressControl = AddressControlFactory.GetControl(address.AddressType);
+
+                    if (addressControl != null)
+                    {
+                        bool c = addressControl.Control(analyze, lines, index);
                     }
                 }
             }
