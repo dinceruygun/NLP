@@ -70,6 +70,7 @@
     <Compile Include="Escape\Warning.cs" />
     <Compile Include="Escape\WordShort.cs" />
     <Compile Include="Interfaces\INlpAnalyse.cs" />
+    <Compile Include="Interfaces\INlpAnalyzeIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

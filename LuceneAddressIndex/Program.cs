@@ -88,7 +88,7 @@ namespace LuceneAddressIndex
                 newRow["ilceid"] = splitData[0];
                 newRow["sehirid"] = splitData[1];
                 newRow["ilceadi"] = splitData[2];
-                newRow["sehiradi"] = splitData[3];
+                //newRow["sehiradi"] = splitData[3];
 
 
                 TableIlceler.Rows.Add(newRow);
@@ -168,7 +168,7 @@ namespace LuceneAddressIndex
             TableIlceler.Columns.Add("ilceid");
             TableIlceler.Columns.Add("sehirid");
             TableIlceler.Columns.Add("ilceadi");
-            TableIlceler.Columns.Add("sehiradi");
+            //TableIlceler.Columns.Add("sehiradi");
         }
 
         static void LoadTableSemtMahalle()

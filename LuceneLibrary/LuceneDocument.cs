@@ -57,9 +57,11 @@ namespace LuceneLibrary
                     }
 
                     _IndexWriter.AddDocument(_Document);
-                    _IndexWriter.Optimize();
-                    _IndexWriter.Commit();
                 }
+
+
+                _IndexWriter.Optimize();
+                _IndexWriter.Commit();
             }
         }
 
