@@ -7,26 +7,26 @@ using NLPEnvironment.Analyze;
 using NLPEnvironment.Entities;
 using NLPEnvironment.Interfaces;
 
-namespace NlpAnalyseAddress.AddressControl
+namespace NlpAnalyseAddress.AnalyzeControl
 {
-    public class AddressControlDistrict : IAddressControl
+    public class AnalyzeControlDistrict : IAnalyzeControl
     {
         internal override bool Control(INlpAnalyzeIndex analyze, LineCollection lines, AnalyzeIndex index)
         {
 
             if (index.WordNumber >= lines[index.LineNumber].SentenceList[index.SentenceNumber].WordList.Count - 1) return false;
 
-            var nextWord = lines[index.LineNumber].SentenceList[index.SentenceNumber].WordList[index.WordNumber + 1];
+            var nextWord = lines[index.LineNumber].SentenceList[index.SentenceNumber].WordList[index.WordNumber + 1]?.SpellWord?.Root?.Text?.ToLower();
 
-            if (nextWord.Root.Text.ToLower() == "mahalle")
+            if (nextWord == "mahalle")
             {
                 return true;
             }
-            else if (nextWord.Text.ToLower() == "mah")
+            else if (nextWord == "mah")
             {
                 return true;
             }
-            else if (nextWord.Text.ToLower() == "mah.")
+            else if (nextWord == "mah.")
             {
                 return true;
             }

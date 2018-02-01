@@ -9,7 +9,7 @@ using NLPEnvironment.Interfaces;
 
 namespace NlpAnalyseAddress
 {
-    public abstract class IAddressControl
+    public abstract class IAnalyzeControl
     {
         internal abstract bool Control(INlpAnalyzeIndex analyze, LineCollection lines, AnalyzeIndex index);
     }

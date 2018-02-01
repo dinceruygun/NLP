@@ -42,18 +42,20 @@ namespace NlpAnalyseAddress
 
                                 var adresList = AddressControl(word);
 
-                                if (adresList.Count > 0)
-                                {
-                                    var analyze = new AnalyzeIndex();
 
-                                    analyze.AnalyzeIndexCollection.AddRange(adresList);
-                                    analyze.LineNumber = lines.IndexOf(line);
-                                    analyze.WordNumber = sentence.WordList.IndexOf(word);
-                                    analyze.SentenceNumber = line.SentenceList.IndexOf(sentence);
+                                if (adresList != null)
+                                    if (adresList.Count > 0)
+                                    {
+                                        var analyze = new AnalyzeIndex();
+
+                                        analyze.AnalyzeIndexCollection.AddRange(adresList);
+                                        analyze.LineNumber = lines.IndexOf(line);
+                                        analyze.WordNumber = sentence.WordList.IndexOf(word);
+                                        analyze.SentenceNumber = line.SentenceList.IndexOf(sentence);
 
 
-                                    analyzeIndexList.Add(analyze);
-                                }
+                                        analyzeIndexList.Add(analyze);
+                                    }
                             }
                         }
                     }
@@ -76,19 +78,24 @@ namespace NlpAnalyseAddress
         {
             if (analyzeIndexList == null) return;
 
-            foreach (var index in analyzeIndexList)
+            foreach (var index in analyzeIndexList.ToArray())
             {
-                foreach (var analyze in index.AnalyzeIndexCollection)
+                foreach (var analyze in index.AnalyzeIndexCollection.ToArray())
                 {
                     var address = (analyze as AddressItem);
 
-                    var addressControl = AddressControlFactory.GetControl(address.AddressType);
+                    var addressControl = AnalyzeControlFactory.GetControl(address.AddressType);
 
                     if (addressControl != null)
                     {
                         bool c = addressControl.Control(analyze, lines, index);
+
+                        if (!c) index.AnalyzeIndexCollection.Remove(analyze);
                     }
                 }
+
+
+                if (index.AnalyzeIndexCollection.Count == 0) analyzeIndexList.Remove(index);
             }
         }
 
@@ -99,6 +106,7 @@ namespace NlpAnalyseAddress
         {
 
             if (word == null) return null;
+            if (word.SpellWord.Root.Text.Length < 3) return null;
 
             var result = new List<AddressItem>();
 

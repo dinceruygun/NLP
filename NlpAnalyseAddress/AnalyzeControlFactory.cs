@@ -1,4 +1,5 @@
-﻿using NlpAnalyseAddress.AddressControl;
+﻿
+using NlpAnalyseAddress.AnalyzeControl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace NlpAnalyseAddress
 {
-    public static class AddressControlFactory
+    public static class AnalyzeControlFactory
     {
-        public static IAddressControl GetControl(AddressTypeEnum addressType)
+        public static IAnalyzeControl GetControl(AddressTypeEnum addressType)
         {
             switch (addressType)
             {
@@ -22,7 +23,7 @@ namespace NlpAnalyseAddress
                 case AddressTypeEnum.CITY:
                     break;
                 case AddressTypeEnum.DISTRICT:
-                    return new AddressControlDistrict();
+                    return new AnalyzeControlDistrict();
                 default:
                     break;
             }

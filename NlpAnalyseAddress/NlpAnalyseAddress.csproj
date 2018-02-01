@@ -41,12 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressAttribute.cs" />
-    <Compile Include="AddressControlFactory.cs" />
-    <Compile Include="AddressControl\AddressControlDistrict.cs" />
+    <Compile Include="AnalyzeControlFactory.cs" />
+    <Compile Include="AnalyzeControl\AnalyzeControlDistrict.cs" />
     <Compile Include="AddressItem.cs" />
     <Compile Include="AddressTypeEnum.cs" />
     <Compile Include="AnalyseAddress.cs" />
-    <Compile Include="IAddressControl.cs" />
+    <Compile Include="IAnalyzeControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
